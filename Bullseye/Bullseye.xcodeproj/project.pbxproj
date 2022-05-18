@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BC294442835219100D52739 /* RoundViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC294432835219100D52739 /* RoundViews.swift */; };
 		D6B6ECF82831F67200C626D5 /* BullseyeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6ECF72831F67200C626D5 /* BullseyeApp.swift */; };
 		D6B6ECFA2831F67200C626D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6ECF92831F67200C626D5 /* ContentView.swift */; };
 		D6B6ECFC2831F67300C626D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6B6ECFB2831F67300C626D5 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3BC294432835219100D52739 /* RoundViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundViews.swift; sourceTree = "<group>"; };
 		D6B6ECF42831F67200C626D5 /* Bullseye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bullseye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B6ECF72831F67200C626D5 /* BullseyeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullseyeApp.swift; sourceTree = "<group>"; };
 		D6B6ECF92831F67200C626D5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				D6B6ECF92831F67200C626D5 /* ContentView.swift */,
 				D6B6ED1C2834C0C200C626D5 /* TextUIViews.swift */,
 				D6B6ED1E2834C66500C626D5 /* Shapes.swift */,
+				3BC294432835219100D52739 /* RoundViews.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				D6B6ED1F2834C66500C626D5 /* Shapes.swift in Sources */,
 				D6B6ED0D2834833B00C626D5 /* Game.swift in Sources */,
 				D6B6ECF82831F67200C626D5 /* BullseyeApp.swift in Sources */,
+				3BC294442835219100D52739 /* RoundViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,7 +385,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Bullseye/Preview Content\"";
-				DEVELOPMENT_TEAM = M49GZVCJ3B;
+				DEVELOPMENT_TEAM = TGR2SR2JNL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -389,6 +393,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -410,7 +415,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Bullseye/Preview Content\"";
-				DEVELOPMENT_TEAM = M49GZVCJ3B;
+				DEVELOPMENT_TEAM = TGR2SR2JNL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -418,6 +423,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
