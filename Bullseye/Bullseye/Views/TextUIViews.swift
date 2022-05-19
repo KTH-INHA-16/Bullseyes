@@ -40,8 +40,22 @@ struct SliderLabelText: View {
         Text(text)
             .foregroundColor(Color("TextColor"))
             .bold()
+            .frame(width: 35)
     }
 }
+
+struct LabelText: View {
+    let text: String
+    
+    var body: some View {
+        Text(text)
+            .kerning(1.5)
+            .bold()
+            .font(.caption)
+            .foregroundColor(Color("TextColor"))
+    }
+}
+
 
 struct TextUIViews_Previews: PreviewProvider {
     static var previews: some View {
@@ -49,6 +63,7 @@ struct TextUIViews_Previews: PreviewProvider {
             InstructionText(text: "🎯🎯🎯\nPUT THE BULLSYE AS ClZOSE AS YOU CAN TO")
             BigNumberText(text: "89")
             SliderLabelText(text: "1")
+            LabelText(text: "score")
         }
     }
 }

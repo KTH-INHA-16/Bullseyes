@@ -14,8 +14,7 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            Color("BackgroundColor")
-                .edgesIgnoringSafeArea(.all)
+            BackgroundView(game: $game)
             
             VStack {
                 InstructionsView(game: $game)
@@ -83,7 +82,10 @@ struct HitMeButton: View {
                 .strokeBorder(.white, lineWidth: 2.0)
         }
         .alert("Hello there!", isPresented: $alertIsVisible) {
-          Button("Awesome!") { }
+          Button("Awesome!") {
+              let point = game.points(sliderValue: Int(sliderValue))
+              game.startNewRound(points: point)
+          }
         } message: {
             let roundedValue = Int(sliderValue.rounded())
             Text("The slider's value is \(roundedValue).\n You scored \(game.points(sliderValue: roundedValue)) points this round.")
@@ -94,7 +96,7 @@ struct HitMeButton: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .preferredColorScheme(.dark)
+            .preferredColorScheme(.light)
         ContentView()
             .previewLayout(.fixed(width: 568, height: 320))
     }
