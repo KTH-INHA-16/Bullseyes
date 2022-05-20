@@ -94,5 +94,7 @@ struct RingsView: View {
 struct BackgroundView_Previews: PreviewProvider {
     static var previews: some View {
         BackgroundView(game: .constant(.init()))
+        BackgroundView(game: .constant(.init()))
+            .preferredColorScheme(.dark)
     }
 }

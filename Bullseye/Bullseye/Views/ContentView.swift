@@ -20,6 +20,7 @@ struct ContentView: View {
                 InstructionsView(game: $game)
                 
                 SliderView(sliderValue: $sliderValue)
+                    .padding(.bottom, 50)
                 
                 HitMeButton(sliderValue: $sliderValue, game: $game, alertIsVisible: $alertIsVisible)
             }
@@ -62,7 +63,9 @@ struct HitMeButton: View {
     
     var body: some View {
         Button(action: {
-            self.alertIsVisible = true
+            withAnimation {
+                self.alertIsVisible = true
+            }
         }) {
             Text("hit me".uppercased())
             .bold()
@@ -76,19 +79,10 @@ struct HitMeButton: View {
                 LinearGradient(gradient: Gradient(colors: [Color.white.opacity(0.3), Color.clear]), startPoint: .top, endPoint: .bottom)
             }
         )
-        .cornerRadius(21)
+        .cornerRadius(Constants.General.roundedRectCornerRadius)
         .overlay {
-            RoundedRectangle(cornerRadius: 21.0)
-                .strokeBorder(.white, lineWidth: 2.0)
-        }
-        .alert("Hello there!", isPresented: $alertIsVisible) {
-          Button("Awesome!") {
-              let point = game.points(sliderValue: Int(sliderValue))
-              game.startNewRound(points: point)
-          }
-        } message: {
-            let roundedValue = Int(sliderValue.rounded())
-            Text("The slider's value is \(roundedValue).\n You scored \(game.points(sliderValue: roundedValue)) points this round.")
+            RoundedRectangle(cornerRadius: Constants.General.roundedRectCornerRadius)
+                .strokeBorder(.white, lineWidth: Constants.General.strokeWidth)
         }
     }
 }
