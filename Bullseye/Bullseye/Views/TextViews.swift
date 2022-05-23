@@ -21,6 +21,42 @@ struct InstructionText: View {
     }
 }
 
+struct ScoreText: View {
+    var score: Int
+    
+    var body: some View {
+        Text(String(score))
+            .kerning(-0.2)
+            .bold()
+            .font(.title3)
+            .foregroundColor(Color("TextColor"))
+    }
+}
+
+struct DateText: View {
+    var date: Date
+    
+    var body: some View {
+        Text(date, style: .time)
+            .kerning(-0.2)
+            .bold()
+            .font(.title3)
+            .foregroundColor(Color("TextColor"))
+    }
+}
+
+struct BigBoldText: View {
+    let text: String
+    
+    var body: some View {
+        Text(text.uppercased())
+            .kerning(2)
+            .foregroundColor(Color("TextColor"))
+            .font(.title)
+            .fontWeight(.black)
+    }
+}
+
 struct BigNumberText: View {
     let text: String
     
@@ -92,6 +128,9 @@ struct TextUIViews_Previews: PreviewProvider {
             LabelText(text: "score")
             BodyText(text: "score")
             ButtonText(text: "score")
+            ScoreText(score: 100)
+            DateText(date: Date())
+            BigBoldText(text: "LEADERBORAD")
         }
     }
 }

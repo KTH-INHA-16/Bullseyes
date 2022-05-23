@@ -22,6 +22,21 @@ struct RoundedImageViewStroked: View {
     }
 }
 
+struct RoundedTextView: View {
+    let text: String
+    
+    var body: some View {
+        Text(text)
+            .font(.title)
+            .foregroundColor(Color("TextColor"))
+            .frame(width: Constants.General.roundedViewLength, height: Constants.General.roundedViewLength)
+            .overlay {
+                Circle()
+                    .strokeBorder(Color("LeaderboardRowColor"), lineWidth: Constants.General.strokeWidth)
+            }
+    }
+}
+
 struct RoundedImageViewFilled: View {
     var systemName: String
     
@@ -64,6 +79,7 @@ struct RoundViews_Previews: PreviewProvider {
             RoundedImageViewFilled(systemName: "arrow.clockwise")
                 .preferredColorScheme(.dark)
             RoundRectTextView(text: "999")
+            RoundedTextView(text: "3")
         }
     }
 }
